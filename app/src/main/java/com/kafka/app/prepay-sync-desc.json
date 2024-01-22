@@ -1,0 +1,38 @@
+[
+  {
+    "packDesc": "延长 365 天",
+    "createdBy": "admin",
+    "createdDate": "2023-12-28 23:10:00.000",
+    "updatedBy": "admin",
+    "updatedDate": "2023-12-28 23:10:00.000",
+    "packageBuyCode": "TEST_BUY_PACK_2312281725",
+    "lang": "CH"
+  },
+  {
+    "packDesc": "Extend 365 Days",
+    "createdBy": "admin",
+    "createdDate": "2023-12-28 23:10:00.000",
+    "updatedBy": "admin",
+    "updatedDate": "2023-12-28 23:10:00.000",
+    "packageBuyCode": "TEST_BUY_PACK_2312281725",
+    "lang": "EN"
+  },
+  {
+    "packDesc": "បន្ថែម 365 ថ្ងៃ",
+    "createdBy": "admin",
+    "createdDate": "2023-12-28 23:10:00.000",
+    "updatedBy": "admin",
+    "updatedDate": "2023-12-28 23:10:00.000",
+    "packageBuyCode": "TEST_BUY_PACK_2312281725",
+    "lang": "KH"
+  },
+  {
+    "packDesc": "သက်တမ်းတိုးရက် 365 ရက်",
+    "createdBy": "admin",
+    "createdDate": "2023-12-28 23:10:00.000",
+    "updatedBy": "admin",
+    "updatedDate": "2023-12-28 23:10:00.000",
+    "packageBuyCode": "TEST_BUY_PACK_2312281725",
+    "lang": "MM"
+  }
+]

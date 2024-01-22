@@ -1,0 +1,46 @@
+[
+  {
+    "bundleCategory": "ULM",
+    "bundleDesc": "通话和流量奖励",
+    "bundleGroup": "DATA",
+    "createdBy": "admin",
+    "createdDate": "2023-12-28 23:05:00.000",
+    "updatedBy": "admin",
+    "updatedDate": "2023-12-28 23:05:00.000",
+    "bundleName": "Big_Bonus",
+    "lang": "CH"
+  },
+  {
+    "bundleCategory": "ONNET ULM",
+    "bundleDesc": "Calling \u0026 Net bonus",
+    "bundleGroup": "VOICE",
+    "createdBy": "admin",
+    "createdDate": "2023-12-28 23:05:00.000",
+    "updatedBy": "admin",
+    "updatedDate": "2023-12-28 23:05:00.000",
+    "bundleName": "Big_Bonus",
+    "lang": "EN"
+  },
+  {
+    "bundleCategory": "VIU/WETV/IQIYI",
+    "bundleDesc": "ការហៅទូរស័ព្ទនិងប្រាក់រង្វាន់អ៊ីនធឺណិត",
+    "bundleGroup": "CONTENT",
+    "createdBy": "admin",
+    "createdDate": "2023-12-28 23:05:00.000",
+    "updatedBy": "admin",
+    "updatedDate": "2023-12-28 23:05:00.000",
+    "bundleName": "Big_Bonus",
+    "lang": "KH"
+  },
+  {
+    "bundleCategory": "CONTROL PERIOD",
+    "bundleDesc": "ဖုန်းခေါ်+ အင်တာနက် ဘောနပ်",
+    "bundleGroup": "CONTROL",
+    "createdBy": "admin",
+    "createdDate": "2023-12-28 23:05:00.000",
+    "updatedBy": "admin",
+    "updatedDate": "2023-12-28 23:05:00.000",
+    "bundleName": "Big_Bonus",
+    "lang": "MM"
+  }
+]

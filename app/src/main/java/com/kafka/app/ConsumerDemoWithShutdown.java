@@ -2,7 +2,6 @@ package com.kafka.app;
 
 import java.time.Duration;
 import java.util.Arrays;
-import java.util.Date;
 
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.apache.kafka.clients.consumer.ConsumerRecords;

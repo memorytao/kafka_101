@@ -1,12 +1,18 @@
 package com.kafka.app;
 
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerRecord;
 import org.apache.kafka.common.header.Headers;
-import org.apache.kafka.common.header.internals.RecordHeader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
 
@@ -21,53 +27,39 @@ public class ProducerDemo {
 
         for (int i = 0; i < 100; i++) {
 
-            ProducerRecord<String, String> record = new ProducerRecord<String, String>(topic, getDatta());
-            
+            ProducerRecord<String, String> record = new ProducerRecord<String, String>(topic, getDatta(topic));
+
             Headers headers = record.headers();
             headers.add("sync_date", "20240119".getBytes());
             headers.add("action", "update".getBytes());
             producer.send(record);
-            producer.flush();
         }
+
+        producer.flush();
         producer.close();
     }
 
-    public static String getDatta() {
+    public static String getDatta(String topic) {
 
         String data = "";
 
-        String json = """
-                {
-                    "createdBy": "admin",
-                    "createdDate": "2023-12-28 04:02:00.000",
-                    "updatedBy": "admin",
-                    "updatedDate": "2023-12-28 04:02:00.000",
-                    "id": 6152,
-                    "packageBuyCode": "TEST_BUY_PACK_2312281725",
-                    "packageAddCode": "TEST_ADD_PACK_2312281725",
-                    "bundleName": "Big_Bonus5",
-                    "packageType": "DATA",
-                    "chargeType": "OC",
-                    "bundleType": "MAIN",
-                    "bundleAmount": 0.0,
-                    "bundleValidity": "1",
-                    "bundleValidityUnit": "D",
-                    "bundleGroupDisplay": 0,
-                    "ccpBundle": 0,
-                    "packageSpeed": "100",
-                    "priceVatExc": 100.0,
-                    "priceVatInt": 120.0,
-                    "pricePriority": 1,
-                    "endpointBuy": "SBM3G",
-                    "endpointCancel": "SBM3G",
-                    "effectiveDate": "2024-01-03 02:04:58.000",
-                    "loyaltyFlag": 0,
-                    "syncLoyalty": 1
-                  }
-                    """;
+        String currentPath = System.getProperty("user.dir");
+        Path path = Paths.get(currentPath + "/app/src/main/java/com/kafka/app/" + topic + ".json");
+        System.out.println(path.toAbsolutePath());
 
-        JsonElement jsonElement = JsonParser.parseString(json);
-        data = jsonElement.getAsJsonObject().toString();
+        try {
+
+            JsonElement jsonElement = JsonParser.parseString(Files.readString(path));
+            JsonArray jsonArray = jsonElement.getAsJsonArray();
+
+            int index = (int) ((Math.random() * (3 - 0 + 1)) + 0);
+            System.out.println(jsonArray.get(index).toString());
+            return jsonArray.get(index).toString();
+
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
         return data;
 
     }
